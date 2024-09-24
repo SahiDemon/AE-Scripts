@@ -25,3 +25,10 @@ AE Text Changer is a script for Adobe After Effects that allows users to batch u
 - **Batch Update Text**: Update the text of multiple layers at once.
 - **Undo/Redo Functionality**: Easily revert or reapply changes.
 - **Live Text Update and Preview**: Preview text changes in real-time.
+
+
+## Features for script file `json text.jsx`.
+
+- **Update Text Layers**: Automatically update text layers with election data from a JSON file.
+- **User-Friendly UI**: Simple and intuitive user interface for selecting JSON files and updating data.
+- **Layer Mapping**: Predefined layer mapping 
