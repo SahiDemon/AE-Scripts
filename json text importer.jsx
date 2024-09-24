@@ -1,5 +1,5 @@
 // Create the UI panel
-var window = new Window("palette", "Election Data Update", undefined);
+var window = new Window("palette", "Data Update", undefined);
 window.orientation = "column";
 window.alignChildren = "fill";
 
@@ -29,10 +29,10 @@ updateButton.onClick = function() {
 
                 // Layer mapping for candidates
                 var layerMapping = {
-                    "ANURA KUMARA DISSANAYAKE": "Anura",
-                    "RANIL WICKREMESINGHE": "Ranil",
-                    "SAJITH PREMADASA": "Sajith",
-                    "NAMAL RAJAPAKSA": "Namal"
+                    "John Doe": "John",
+                    "Jane Smith": "Jane",
+                    "Alice Johnson": "Alice",
+                    "Bob Brown": "Bob"
                 };
 
                 // Loop through all compositions in the project
@@ -41,7 +41,7 @@ updateButton.onClick = function() {
                         var comp = app.project.item(i);
                         var layers = comp.layers;
 
-                        // Update each candidate's votes and percentage
+
                         for (var j = 0; j < data.candidates.length; j++) {
                             var candidate = data.candidates[j];
                             var layerPrefix = layerMapping[candidate.name]; // Get the correct prefix
@@ -53,7 +53,7 @@ updateButton.onClick = function() {
                             if (percentageLayer) percentageLayer.text.sourceText.setValue(candidate.percentage + "%");
                         }
 
-                        // Update general values: valid votes, rejected votes, total polled, total electors
+               
                         var validVotesLayer = layers.byName("Valid_Votes");
                         var rejectedVotesLayer = layers.byName("Rejected_Votes");
                         var totalPolledLayer = layers.byName("Total_Polled");
